@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{27CF3718-AA7B-4DA3-8BC0-05F92A4FE6A4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ControleGastos</RootNamespace>
+    <AssemblyName>ControleGastos</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\Competencia_Controller.cs" />
+    <Compile Include="Entidades\Competencias.cs" />
+    <Compile Include="Entidades\Lancamentos.cs" />
+    <Compile Include="Enums\Status.cs" />
+    <Compile Include="Enums\TipoLancamentos.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CompetenciasModels.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\frmCadLancamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmCadLancamentos.Designer.cs">
+      <DependentUpon>frmCadLancamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmCompetencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmCompetencia.Designer.cs">
+      <DependentUpon>frmCompetencia.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\frmCadLancamentos.resx">
+      <DependentUpon>frmCadLancamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmCompetencia.resx">
+      <DependentUpon>frmCompetencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\ControleGastos.Controllers.Competencia_Controller.datasource" />
+    <None Include="Properties\DataSources\Npgsql.BackendMessages.FieldDescription.datasource" />
+    <None Include="Properties\DataSources\Npgsql.INpgsqlNameTranslator.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.INpgsqlDatabaseInfoFactory.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.NpgsqlConnector.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.NpgsqlDatabaseInfo.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.NpgsqlReadBuffer.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.NpgsqlWriteBuffer.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.ArrayHandler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.BitStringArrayHandler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.BitStringHandler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.BoolHandler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.ByteaHandler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.CompositeHandlers.ICompositeTypeHandlerFactory.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.DateTimeHandlers.DateHandler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.DateTimeHandlers.DateHandlerFactory.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.DateTimeHandlers.IntervalHandler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.DateTimeHandlers.IntervalHandlerFactory.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.DateTimeHandlers.TimeHandler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.DateTimeHandlers.TimeHandlerFactory.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.DateTimeHandlers.TimestampHandler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.DateTimeHandlers.TimestampHandlerFactory.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.DateTimeHandlers.TimestampTzHandler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.DateTimeHandlers.TimestampTzHandlerFactory.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.DateTimeHandlers.TimeTzHandler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.DateTimeHandlers.TimeTzHandlerFactory.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.FullTextSearchHandlers.TsQueryHandler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.FullTextSearchHandlers.TsVectorHandler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.GeometricHandlers.BoxHandler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.GeometricHandlers.CircleHandler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.GeometricHandlers.LineHandler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.GeometricHandlers.LineSegmentHandler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.GeometricHandlers.PathHandler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.GeometricHandlers.PointHandler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.GeometricHandlers.PolygonHandler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.HstoreHandler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.HstoreHandlerFactory.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.IEnumTypeHandlerFactory.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.InternalTypeHandlers.InternalCharHandler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.IRangeHandler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.JsonbHandlerFactory.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.JsonHandler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.JsonHandlerFactory.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.JsonPathHandler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.JsonPathHandlerFactory.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.LTreeHandlers.LQueryHandler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.LTreeHandlers.LTreeHandler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.LTreeHandlers.LTxtQueryHandler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.NetworkHandlers.CidrHandler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.NetworkHandlers.InetHandler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.NetworkHandlers.MacaddrHandler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.NumericHandlers.DoubleHandler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.NumericHandlers.Int16Handler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.NumericHandlers.Int32Handler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.NumericHandlers.Int64Handler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.NumericHandlers.MoneyHandler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.NumericHandlers.NumericHandler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.NumericHandlers.SingleHandler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.NumericHandlers.UInt32Handler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.NumericHandlers.UInt64Handler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.TextHandler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.TextHandlerFactory.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandlers.UuidHandler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandling.NpgsqlTypeHandler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Internal.TypeHandling.NpgsqlTypeHandlerFactory.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Logging.ConsoleLoggingProvider.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Logging.INpgsqlLoggingProvider.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Logging.NpgsqlLogger.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Logging.NpgsqlLogManager.datasource" />
+    <None Include="Properties\DataSources\Npgsql.NameTranslation.NpgsqlNullNameTranslator.datasource" />
+    <None Include="Properties\DataSources\Npgsql.NameTranslation.NpgsqlSnakeCaseNameTranslator.datasource" />
+    <None Include="Properties\DataSources\Npgsql.NoticeEventHandler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.NotificationEventHandler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.NpgsqlBatch.datasource" />
+    <None Include="Properties\DataSources\Npgsql.NpgsqlBatchCommand.datasource" />
+    <None Include="Properties\DataSources\Npgsql.NpgsqlBatchCommandCollection.datasource" />
+    <None Include="Properties\DataSources\Npgsql.NpgsqlBinaryExporter.datasource" />
+    <None Include="Properties\DataSources\Npgsql.NpgsqlBinaryImporter.datasource" />
+    <None Include="Properties\DataSources\Npgsql.NpgsqlCommand.datasource" />
+    <None Include="Properties\DataSources\Npgsql.NpgsqlCommandBuilder.datasource" />
+    <None Include="Properties\DataSources\Npgsql.NpgsqlConnection.datasource" />
+    <None Include="Properties\DataSources\Npgsql.NpgsqlConnectionStringBuilder.datasource" />
+    <None Include="Properties\DataSources\Npgsql.NpgsqlConnectionStringPropertyAttribute.datasource" />
+    <None Include="Properties\DataSources\Npgsql.NpgsqlCopyTextReader.datasource" />
+    <None Include="Properties\DataSources\Npgsql.NpgsqlCopyTextWriter.datasource" />
+    <None Include="Properties\DataSources\Npgsql.NpgsqlDataAdapter.datasource" />
+    <None Include="Properties\DataSources\Npgsql.NpgsqlDataReader.datasource" />
+    <None Include="Properties\DataSources\Npgsql.NpgsqlException.datasource" />
+    <None Include="Properties\DataSources\Npgsql.NpgsqlFactory.datasource" />
+    <None Include="Properties\DataSources\Npgsql.NpgsqlLargeObjectManager.datasource" />
+    <None Include="Properties\DataSources\Npgsql.NpgsqlLargeObjectStream.datasource" />
+    <None Include="Properties\DataSources\Npgsql.NpgsqlLengthCache.datasource" />
+    <None Include="Properties\DataSources\Npgsql.NpgsqlNestedDataReader.datasource" />
+    <None Include="Properties\DataSources\Npgsql.NpgsqlNoticeEventArgs.datasource" />
+    <None Include="Properties\DataSources\Npgsql.NpgsqlNotificationEventArgs.datasource" />
+    <None Include="Properties\DataSources\Npgsql.NpgsqlOperationInProgressException.datasource" />
+    <None Include="Properties\DataSources\Npgsql.NpgsqlParameter.datasource" />
+    <None Include="Properties\DataSources\Npgsql.NpgsqlParameterCollection.datasource" />
+    <None Include="Properties\DataSources\Npgsql.NpgsqlRawCopyStream.datasource" />
+    <None Include="Properties\DataSources\Npgsql.NpgsqlRowUpdatedEventArgs.datasource" />
+    <None Include="Properties\DataSources\Npgsql.NpgsqlRowUpdatedEventHandler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.NpgsqlRowUpdatingEventArgs.datasource" />
+    <None Include="Properties\DataSources\Npgsql.NpgsqlRowUpdatingEventHandler.datasource" />
+    <None Include="Properties\DataSources\Npgsql.NpgsqlTransaction.datasource" />
+    <None Include="Properties\DataSources\Npgsql.PhysicalOpenAsyncCallback.datasource" />
+    <None Include="Properties\DataSources\Npgsql.PhysicalOpenCallback.datasource" />
+    <None Include="Properties\DataSources\Npgsql.PostgresErrorCodes.datasource" />
+    <None Include="Properties\DataSources\Npgsql.PostgresException.datasource" />
+    <None Include="Properties\DataSources\Npgsql.PostgresNotice.datasource" />
+    <None Include="Properties\DataSources\Npgsql.PostgresTypes.PostgresArrayType.datasource" />
+    <None Include="Properties\DataSources\Npgsql.PostgresTypes.PostgresBaseType.datasource" />
+    <None Include="Properties\DataSources\Npgsql.PostgresTypes.PostgresCompositeType+Field.datasource" />
+    <None Include="Properties\DataSources\Npgsql.PostgresTypes.PostgresCompositeType.datasource" />
+    <None Include="Properties\DataSources\Npgsql.PostgresTypes.PostgresDomainType.datasource" />
+    <None Include="Properties\DataSources\Npgsql.PostgresTypes.PostgresEnumType.datasource" />
+    <None Include="Properties\DataSources\Npgsql.PostgresTypes.PostgresRangeType.datasource" />
+    <None Include="Properties\DataSources\Npgsql.PostgresTypes.PostgresType.datasource" />
+    <None Include="Properties\DataSources\Npgsql.PostgresTypes.UnknownBackendType.datasource" />
+    <None Include="Properties\DataSources\Npgsql.ProvideClientCertificatesCallback.datasource" />
+    <None Include="Properties\DataSources\Npgsql.ProvidePasswordCallback.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Replication.Internal.LogicalReplicationConnectionExtensions.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Replication.Internal.LogicalReplicationSlot.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Replication.LogicalReplicationConnection.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Replication.PgOutput.Messages.BeginMessage.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Replication.PgOutput.Messages.CommitMessage.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Replication.PgOutput.Messages.DeleteMessage.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Replication.PgOutput.Messages.FullDeleteMessage.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Replication.PgOutput.Messages.FullUpdateMessage.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Replication.PgOutput.Messages.IndexUpdateMessage.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Replication.PgOutput.Messages.InsertMessage.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Replication.PgOutput.Messages.KeyDeleteMessage.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Replication.PgOutput.Messages.LogicalDecodingMessage.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Replication.PgOutput.Messages.OriginMessage.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Replication.PgOutput.Messages.PgOutputReplicationMessage.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Replication.PgOutput.Messages.RelationMessage+Column.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Replication.PgOutput.Messages.RelationMessage.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Replication.PgOutput.Messages.RelationMessageColumn.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Replication.PgOutput.Messages.StreamAbortMessage.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Replication.PgOutput.Messages.StreamCommitMessage.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Replication.PgOutput.Messages.StreamStartMessage.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Replication.PgOutput.Messages.StreamStopMessage.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Replication.PgOutput.Messages.TransactionalMessage.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Replication.PgOutput.Messages.TransactionControlMessage.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Replication.PgOutput.Messages.TruncateMessage.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Replication.PgOutput.Messages.TupleData.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Replication.PgOutput.Messages.TypeMessage.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Replication.PgOutput.Messages.UpdateMessage.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Replication.PgOutput.PgOutputReplicationOptions.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Replication.PgOutput.PgOutputReplicationSlot.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Replication.PgOutputConnectionExtensions.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Replication.PhysicalReplicationConnection.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Replication.PhysicalReplicationSlot.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Replication.ReplicationConnection.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Replication.ReplicationMessage.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Replication.ReplicationSlot.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Replication.ReplicationSlotOptions.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Replication.ReplicationSystemIdentification.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Replication.TestDecoding.TestDecodingData.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Replication.TestDecoding.TestDecodingOptions.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Replication.TestDecoding.TestDecodingReplicationSlot.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Replication.TestDecodingConnectionExtensions.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Replication.TimelineHistoryFile.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Replication.XLogDataMessage.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Schema.NpgsqlDbColumn.datasource" />
+    <None Include="Properties\DataSources\Npgsql.TypeMapping.INpgsqlTypeMapper.datasource" />
+    <None Include="Properties\DataSources\Npgsql.TypeMapping.NpgsqlTypeMapping.datasource" />
+    <None Include="Properties\DataSources\Npgsql.TypeMapping.NpgsqlTypeMappingBuilder.datasource" />
+    <None Include="Properties\DataSources\Npgsql.Util.NpgsqlTimeout.datasource" />
+    <None Include="Properties\DataSources\NpgsqlTypes.NpgsqlBox.datasource" />
+    <None Include="Properties\DataSources\NpgsqlTypes.NpgsqlCircle.datasource" />
+    <None Include="Properties\DataSources\NpgsqlTypes.NpgsqlDate.datasource" />
+    <None Include="Properties\DataSources\NpgsqlTypes.NpgsqlDateTime.datasource" />
+    <None Include="Properties\DataSources\NpgsqlTypes.NpgsqlInet.datasource" />
+    <None Include="Properties\DataSources\NpgsqlTypes.NpgsqlLine.datasource" />
+    <None Include="Properties\DataSources\NpgsqlTypes.NpgsqlLogSequenceNumber.datasource" />
+    <None Include="Properties\DataSources\NpgsqlTypes.NpgsqlLSeg.datasource" />
+    <None Include="Properties\DataSources\NpgsqlTypes.NpgsqlPath.datasource" />
+    <None Include="Properties\DataSources\NpgsqlTypes.NpgsqlPoint.datasource" />
+    <None Include="Properties\DataSources\NpgsqlTypes.NpgsqlPolygon.datasource" />
+    <None Include="Properties\DataSources\NpgsqlTypes.NpgsqlTid.datasource" />
+    <None Include="Properties\DataSources\NpgsqlTypes.NpgsqlTimeSpan.datasource" />
+    <None Include="Properties\DataSources\NpgsqlTypes.NpgsqlTsQuery+NodeKind.datasource" />
+    <None Include="Properties\DataSources\NpgsqlTypes.NpgsqlTsQuery.datasource" />
+    <None Include="Properties\DataSources\NpgsqlTypes.NpgsqlTsQueryAnd.datasource" />
+    <None Include="Properties\DataSources\NpgsqlTypes.NpgsqlTsQueryBinOp.datasource" />
+    <None Include="Properties\DataSources\NpgsqlTypes.NpgsqlTsQueryEmpty.datasource" />
+    <None Include="Properties\DataSources\NpgsqlTypes.NpgsqlTsQueryFollowedBy.datasource" />
+    <None Include="Properties\DataSources\NpgsqlTypes.NpgsqlTsQueryLexeme+Weight.datasource" />
+    <None Include="Properties\DataSources\NpgsqlTypes.NpgsqlTsQueryLexeme.datasource" />
+    <None Include="Properties\DataSources\NpgsqlTypes.NpgsqlTsQueryNot.datasource" />
+    <None Include="Properties\DataSources\NpgsqlTypes.NpgsqlTsQueryOr.datasource" />
+    <None Include="Properties\DataSources\NpgsqlTypes.NpgsqlTsVector+Lexeme+Weight.datasource" />
+    <None Include="Properties\DataSources\NpgsqlTypes.NpgsqlTsVector+Lexeme+WordEntryPos.datasource" />
+    <None Include="Properties\DataSources\NpgsqlTypes.NpgsqlTsVector+Lexeme.datasource" />
+    <None Include="Properties\DataSources\NpgsqlTypes.NpgsqlTsVector.datasource" />
+    <None Include="Properties\DataSources\NpgsqlTypes.PgNameAttribute.datasource" />
+    <None Include="Properties\DataSources\System.Data.Common.DbBatch.datasource" />
+    <None Include="Properties\DataSources\System.Data.Common.DbBatchCommand.datasource" />
+    <None Include="Properties\DataSources\System.Data.Common.DbBatchCommandCollection.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <PackageReference Include="linq2db.PostgreSQL">
+      <Version>4.0.0-preview.4</Version>
+    </PackageReference>
+    <PackageReference Include="Npgsql">
+      <Version>6.0.0-preview7</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
